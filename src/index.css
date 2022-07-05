@@ -1,3 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +19,26 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.favorite-svg{
+    position: absolute;
+    right: 28px;
+    bottom: 28px;
+    width: 40px;
+    height: 37px;
+    cursor: pointer;
+    transition: 0.4s;
+    opacity:  0;
+}
+.favorite-svg path:last-child{
+    transition: fill 0.4s;
+}
+
+.favorite-svg:hover path:last-child{
+    fill: #F24E1E;
+}
+
+.cat-card:hover .favorite-svg {
+    opacity: 1;
 }
